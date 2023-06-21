@@ -1,0 +1,9 @@
+$breakpt-xs: 400px;
+$breakpt-sm: 600px;
+$breakpt-md: $breakpt-sm+1;
+$breakpt-lg: 992px;
+
+$x-sm: 'only screen and (max-width: #{$breakpt-xs})';
+$small: 'only screen and (max-width: #{$breakpt-sm})';
+$medium: 'only screen and (min-width: #{$breakpt-md})';
+$large: 'only screen and (min-width: #{$breakpt-lg})';

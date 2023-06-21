@@ -1,0 +1,5 @@
+misc/
+node_modules/
+build/
+src/css/
+package-lock.json

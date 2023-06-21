@@ -1,0 +1,170 @@
+@use '_colors';
+@use '_screens';
+
+.display-container{
+    width: 100%;
+    height: 30%;
+    padding: 0.5rem;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: colors.$display-bg;
+    color: colors.$display-text;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.current-result{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+
+    .result-header{
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .result-details{
+        margin: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .result-display{
+        margin: 0;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+.details-view{
+    height: 100%;
+    width: 50%;
+
+    .result-history{
+        height: 60%;
+        width: 100%;
+        border: 1px solid colors.$display-outline;
+        box-sizing: border-box;
+        background-color: colors.$history-bg;
+
+        .result-history-list{
+            margin: 0;
+            padding: 1.5rem;
+            height: 100%;
+            width: 100%;
+            list-style: none;
+            box-sizing: border-box;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        li{
+            margin: 0.5rem auto;
+        }
+
+        .result-header{
+            position: relative;
+            left: -1rem;
+            margin: 0.5rem 0;
+        }
+    
+        .result-display{
+            position: relative;
+            left: 1rem;
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+    }
+
+    .addBtn{
+        height: 40%;
+        width: 100%;
+        border: 1px solid colors.$display-outline;
+        font-size: 1.25rem;
+        background-color: colors.$addbtn-bg;
+        color: colors.$display-text;
+    }
+    
+    .addBtn:hover{
+        background-color: colors.$addbtn-hover-bg;
+    }
+    
+    .addBtn:active{
+        font-size: 1.9rem;
+    }
+
+}
+
+
+
+@media #{screens.$small} {
+    .result-history{
+        height: 80%;
+    }
+    
+    .addBtn{
+        height: 20%;
+        font-size: 1.5rem;
+    }
+}
+
+@media #{screens.$medium} {
+    .current-result{
+        .result-header{
+            margin-bottom: 1rem;
+        }
+    
+        .result-details{
+            margin-bottom: 2rem;
+        }
+    
+        .result-display{
+            font-size: 4rem;
+        }
+    }
+
+    .addBtn{
+        font-size: 2rem;
+    }
+
+}
+
+@media #{screens.$large} {
+    .display-container{
+        width: 30%;
+        height: 100%;
+        padding: 1.5rem;
+        flex-direction: column;
+    }
+
+    .current-result{
+        height: 50%;
+        width: 100%;
+        font-size: 2rem;
+
+        .result-header{
+            margin-bottom: 2rem;
+        }
+    
+        .result-details{
+            margin-bottom: 3rem;
+        }
+    
+        .result-display{
+            font-size: 6rem;
+        }
+    }
+
+    .details-view{
+        height: 50%;
+        width: 100%;
+    }
+
+}
